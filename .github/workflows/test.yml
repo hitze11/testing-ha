@@ -1,35 +1,40 @@
-name: Run Tests
+name: Run Tests and Store Coverage Report
 
 on:
   push:
     branches:
       - main
+      - develop 
   pull_request:
     branches:
       - main
+      - develop 
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      
+      - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install dependencies
+        run: |
+          npm install  # Falls du npm verwendest, andernfalls das passende Kommando für deine Umgebung
 
-      - name: Run Tests
-        run: npm test
+      - name: Run tests
+        run: |
+          npm test  # Auch hier je nach deinem Setup anpassen
 
-      - name: Upload coverage report
-        if: success()
+     
+      - name: Upload coverage report as artifact
         uses: actions/upload-artifact@v2
         with:
           name: coverage-report
-          path: ./coverage
+          path: ./coverage  
