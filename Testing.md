@@ -1,6 +1,6 @@
 # Testing Documentation
 
-## 1. Screenshot des Test-Coverage-Reports (mind. 90%)
+## 1. Screenshot des Test-Coverage-Reports 
 
 
 <img src="https://github.com/hitze11/testing-ha/blob/master/src/test.png"/>
@@ -17,7 +17,7 @@ Wenn keine Bonuskategorien angegeben sind, wurde der Score korrekt validiert. We
 ### Fehler 3: Nicht ganzzahlige Punktzahlen bei `strictMode`
 Im `strictMode` wird erwartet, dass Punktzahlen nur ganze Zahlen sind. Es gab jedoch Fälle, in denen Dezimalzahlen (z. B. `75.5`) nicht korrekt invalidiert wurden, was zu falschen Validierungsfehlern führte.
 
-## 3. Erklärung der Test-Struktur
+## 3.Test-Struktur
 
 Die Tests für die `validateScore`-Funktion sind in verschiedene Teile unterteilt:
 
