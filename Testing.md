@@ -2,8 +2,8 @@
 
 ## 1. Screenshot des Test-Coverage-Reports (mind. 90%)
 
-![Test Coverage Report] ../src/test.png
 
+<img src="../src/test.png"/>
 *Der Coverage-Bericht zeigt, dass alle wichtigen Teile des Codes getestet wurden und eine Testabdeckung von mindestens 90% erreicht wurde.*
 
 ## 2. Entdeckte Fehler oder Edge-Cases
