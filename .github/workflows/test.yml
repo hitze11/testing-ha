@@ -26,11 +26,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install  # Falls du npm verwendest, andernfalls das passende Kommando für deine Umgebung
+          npm install  
 
       - name: Run tests
         run: |
-          npm test  # Auch hier je nach deinem Setup anpassen
+          npm run test 
 
      
       - name: Upload coverage report as artifact

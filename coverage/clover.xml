@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1741092754380" clover="3.2.0">
-  <project timestamp="1741092754380" name="All files">
+<coverage generated="1741094976481" clover="3.2.0">
+  <project timestamp="1741094976481" name="All files">
     <metrics statements="89" coveredstatements="81" conditionals="23" coveredconditionals="21" methods="1" coveredmethods="1" elements="113" coveredelements="103" complexity="0" loc="89" ncloc="89" packages="1" files="1" classes="1"/>
     <file name="validateScore.js" path="C:\Users\ronny\workspace\testing_workshop\src\validateScore.js">
       <metrics statements="89" coveredstatements="81" conditionals="23" coveredconditionals="21" methods="1" coveredmethods="1"/>
