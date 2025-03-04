@@ -1,40 +1,19 @@
-name: Run Tests and Store Coverage Report
+name: Test
 
-on:
-  push:
-    branches:
-      - main
-      - develop 
-  pull_request:
-    branches:
-      - main
-      - develop 
+on: [push, pull_request]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          
-
-      - name: Install dependencies
-        run: |
-          npm install  
-
-      - name: Run tests
-        run: |
-          npm run test 
-
-     
-      - name: Upload coverage report as artifact
-        uses: actions/upload-artifact@v2
+          node-version: '14'
+      - run: npm install
+      - run: npm test
+      - uses: actions/upload-artifact@v2
         with:
           name: coverage-report
-          path: ./coverage  
+          path: coverage/
